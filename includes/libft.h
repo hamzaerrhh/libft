@@ -5,7 +5,8 @@
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 # define BUFF_SIZE 5000
 
-typedef unsigned char	t_byte;
+typedef unsigned char	ign_char;
+
 typedef struct	s_list
 {
 	void				*content;
