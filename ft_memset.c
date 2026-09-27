@@ -6,11 +6,17 @@ void			*ft_memset(void *s, int c, size_t n){
  return s;
 }
 
+// int main(void)
+// {
+//     char str[] = "hello world";
 
-#include <stdio.h>
-int main(){
-    char str[]="hello world";
-  char *res=  ft_memset(str,'A',11);
-    printf("%s\n",res);
-    return 0;
-}
+//     ft_memset(str, 'A', 11);
+//     printf("%s\n", str);
+
+//     int x = 1337;
+
+//     ft_memset(&x, 42, 4);
+//     printf("%d\n", x);
+
+//     return 0;
+// }

@@ -4,6 +4,9 @@
 # include <string.h>
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 # define BUFF_SIZE 5000
+//testing
+# include <stdio.h>
+//
 
 typedef unsigned char	ign_char;
 
