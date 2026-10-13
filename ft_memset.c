@@ -2,9 +2,11 @@
 #include "includes/libft.h"
 void			*ft_memset(void *s, int c, size_t n){
     while(n--)
-       ((ign_char *)s)[n]= c;
+       ((unsigned char *)s)[n]= c;
  return s;
 }
+
+
 
 // int main(void)
 // {
