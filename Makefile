@@ -31,10 +31,18 @@ SRCS = ft_isalnum.c \
        ft_toupper.c \
        ft_memset.c \
        ft_strlen.c \
+       ft_strjoin.c \
+       ft_split.c \
+       ft_itoa.c \
+       ft_strmapi.c \
+       ft_strtrim.c \
+       ft_strtrim.c \
+       ft_putstr_fd.c \
+       ft_putchar_fd.c \
+       ft_putendl_fd.c \
+       ft_putnbr_fd.c \
        ft_substr.c 
 
-BONUS_SRCS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
-             ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
 # Only include bonus sources that actually exist on disk
 ACTIVE_BONUS_SRCS = $(wildcard $(BONUS_SRCS))
@@ -46,15 +54,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-
-bonus: $(OBJS) $(ACTIVE_BONUS_OBJS)
-	@if [ -n "$(ACTIVE_BONUS_OBJS)" ]; then \
-		$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(ACTIVE_BONUS_OBJS); \
-	fi
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(ACTIVE_BONUS_SRCS)
-	$(CC) -nostartfiles -shared -o libft.so $(OBJS) $(ACTIVE_BONUS_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
