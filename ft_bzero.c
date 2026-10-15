@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 14:00:18 by herrabba          #+#    #+#             */
+/*   Updated: 2026/10/15 14:02:17 by herrabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/libft.h"
-       void ft_bzero(void *s, size_t n){
-        ft_memset(s, 0, n);
-       }
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}
 
 // #include <stdio.h>
 //        struct list {

@@ -1,5 +1,16 @@
-#include "includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 14:06:39 by herrabba          #+#    #+#             */
+/*   Updated: 2026/10/15 14:06:41 by herrabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "includes/libft.h"
 
 static int	ft_isc_in_str(const char *str, char c)
 {
@@ -14,7 +25,6 @@ static int	ft_isc_in_str(const char *str, char c)
 	}
 	return (0);
 }
-
 
 char	*ft_strtrim(char const *s1, char const *s2)
 {
@@ -42,7 +52,6 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
-
 
 // int	main(void)
 // {

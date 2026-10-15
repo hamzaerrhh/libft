@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 14:04:44 by herrabba          #+#    #+#             */
+/*   Updated: 2026/10/15 16:20:26 by herrabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/libft.h"
-void ft_putchar_fd(char c, int fd){
-    	if (fd < 0)
+
+void	ft_putchar_fd(char c, int fd)
+{
+	if (fd < 0)
 		return ;
-    write(fd,&c,1);
+	write(fd, &c, 1);
 }

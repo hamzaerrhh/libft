@@ -1,5 +1,16 @@
-#include "includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 14:05:17 by herrabba          #+#    #+#             */
+/*   Updated: 2026/10/15 16:28:59 by herrabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "includes/libft.h"
 
 static int	count_words(char const *s, char c)
 {
@@ -23,7 +34,6 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-
 static char	*get_word(char const *s, char c)
 {
 	size_t	len;
@@ -41,16 +51,17 @@ static char	*get_word(char const *s, char c)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_words(char **result, int i)
 {
-	char	**result;
-	int		i;
+	while (i > 0)
+		free(result[--i]);
+	free(result);
+}
 
-	if (!s)
-		return (NULL);
-	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!result)
-		return (NULL);
+static int	fill_words(char **result, char const *s, char c)
+{
+	int	i;
+
 	i = 0;
 	while (*s)
 	{
@@ -60,20 +71,28 @@ char	**ft_split(char const *s, char c)
 		{
 			result[i] = get_word(s, c);
 			if (!result[i])
-			{
-				while (i > 0)
-					free(result[--i]);
-				free(result);
-				return (NULL);
-			}
+				return (free_words(result, i), 0);
 			i++;
 			s += ft_strlen(result[i - 1]);
 		}
 	}
 	result[i] = NULL;
-	return (result);
+	return (1);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!result)
+		return (NULL);
+	if (!fill_words(result, s, c))
+		return (NULL);
+	return (result);
+}
 
 // int	main(void)
 // {

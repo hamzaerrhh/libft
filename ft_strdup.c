@@ -6,13 +6,13 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:42:12 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/12 17:37:12 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/15 14:05:30 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-       char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		len;
 	int		i;

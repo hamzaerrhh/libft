@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/15 13:59:46 by herrabba          #+#    #+#             */
+/*   Updated: 2026/10/15 16:18:29 by herrabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/libft.h"
 
 static int	is_white_space(char c)
@@ -7,53 +19,44 @@ static int	is_white_space(char c)
 	return (0);
 }
 
-
-
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
-	int count=0;
-	int pre;
-	i = 0;
+	int				sign;
+	unsigned long	res;
+	double			f;
+
 	sign = 1;
-	result = 0;
-	pre=0;
-
-	while (is_white_space(nptr[i]))
-		i++;
-
-	if (nptr[i] == '-')
-	{
+	res = 0;
+	f = 0;
+	while (is_white_space(*nptr))
+		nptr++;
+	if ((*nptr == '-' || *nptr == '+') && *nptr++ == '-')
 		sign = -1;
-		i++;
-	}
-	else if (nptr[i] == '+')
-		i++;
-
-
-	count = ft_strlen(&nptr[i]);
-
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		result = result * 10 + (nptr[i] - '0');
-		if (count > 19)
-		{
-			if (sign == 1 && result / 10 != pre)
-				return -1;
-			 if (sign == -1 && result / 10 != pre)
-			  return 0;
-					 pre = result;
-		}
-		i++;
+		f = f * 10 + (*nptr - '0');
+		res = res * 10 + (*nptr++ - '0');
 	}
-	return (result * sign);
+	if (f > 1.8e19 || res > (unsigned long)9223372036854775807 + (sign == -1))
+	{
+		if (sign == 1)
+			return (-1);
+		return (0);
+	}
+	return ((int)(res * sign));
 }
 
-// int	main(void)
+// int main (){
+
+// printf("%d\n",ft_atoi("-8223372036854775808"));
+// printf("%d\n",atoi("-8223372036854775808"));
+// }
+
+// if (count > 19)
 // {
-// 	printf("%d\n", ft_atoi("10000000000000000000545"));
-// 	printf("%d\n", atoi("10000000000000000000545"));
-// 	return (0);
+// 	if (sign == 1 && result / 10 != pre)
+// 		return (-1);
+// 	if (sign == -1 && result / 10 != pre)
+// 		return (0);
+// 	pre = result;
 // }
