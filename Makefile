@@ -40,15 +40,22 @@ SRCS = ft_isalnum.c \
        ft_putstr_fd.c \
        ft_putchar_fd.c \
        ft_putendl_fd.c \
+       ft_lstadd_back.c \
+       ft_lstnew.c \
+       ft_lstadd_front.c \
+       ft_lstsize.c \
        ft_putnbr_fd.c \
+       ft_lstlast.c \
+       ft_lstadd_back.c \
+       ft_lstdelone.c \
+       ft_lstclear.c \
+       ft_lstiter.c \
+       ft_lstmap.c \
        ft_substr.c 
 
 
-# Only include bonus sources that actually exist on disk
-ACTIVE_BONUS_SRCS = $(wildcard $(BONUS_SRCS))
 
 OBJS = $(SRCS:.c=.o)
-ACTIVE_BONUS_OBJS = $(ACTIVE_BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 

@@ -8,17 +8,23 @@ void			*ft_memset(void *s, int c, size_t n){
 
 
 
+
+
+
+
+// //42 -> -1337
 // int main(void)
 // {
-//     char str[] = "hello world";
+//     char  test[]= "hello";
+    
+//     ft_memset(&test[2], '\0', 1);
+//     ft_memset(&test[1], 'i', 1);
+//     //   ft_memset(&test, 0, 3);
 
-//     ft_memset(str, 'A', 11);
-//     printf("%s\n", str);
 
-//     int x = 1337;
 
-//     ft_memset(&x, 42, 4);
-//     printf("%d\n", x);
+//     printf("%s\n", test);
+
 
 //     return 0;
 // }

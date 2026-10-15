@@ -3,7 +3,20 @@
         ft_memset(s, 0, n);
        }
 
-
+// #include <stdio.h>
+//        struct list {
+//               int  count;
+//               int  c;
+//               struct list *next;
+//        } ;
+//        int main()
+//        {
+//               struct list he;
+//               he.count = 10;
+//               he.c = 'c';
+//               he.next = NULL;
+//               printf("%d\n",sizeof(he));
+//        }
 // int main(void)
 // {
 //     char str[] = "Hello World";
