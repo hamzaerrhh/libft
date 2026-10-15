@@ -10,7 +10,6 @@ SRCS = ft_isalnum.c \
        ft_atoi.c \
        ft_strdup.c \
        ft_bzero.c \
-       ft_strdup.c \
        ft_strlcat.c \
        ft_isascii.c \
        ft_strlcpy.c \
@@ -36,41 +35,38 @@ SRCS = ft_isalnum.c \
        ft_itoa.c \
        ft_strmapi.c \
        ft_strtrim.c \
-       ft_strtrim.c \
        ft_putstr_fd.c \
        ft_putchar_fd.c \
        ft_putendl_fd.c \
-       ft_lstadd_back.c \
        ft_lstnew.c \
        ft_lstadd_front.c \
+       ft_lstadd_back.c \
        ft_lstsize.c \
        ft_putnbr_fd.c \
        ft_lstlast.c \
-       ft_lstadd_back.c \
        ft_lstdelone.c \
        ft_lstclear.c \
        ft_lstiter.c \
        ft_lstmap.c \
-       ft_substr.c 
-
-
+       ft_substr.c
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	rm -f $(NAME)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) libft.so
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus so clean fclean re
+.PHONY: all clean fclean re
