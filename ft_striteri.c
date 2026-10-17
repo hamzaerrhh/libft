@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:05:36 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:05:38 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 17:54:36 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -23,18 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// void shift_char(unsigned int i, char *c)
-// {
-//     *c+=1;
-// }
-
-// int main(){
-//     char str[]="hello abc";
-//   printf("%s\n",str);
-
-//     ft_striteri(str,shift_char);
-//   printf("%s\n",str);
-// return (0);
-
-// }

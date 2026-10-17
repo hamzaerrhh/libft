@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:04:19 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 16:22:58 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:43:07 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

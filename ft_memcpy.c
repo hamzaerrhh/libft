@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:04:24 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 16:23:19 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:43:12 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

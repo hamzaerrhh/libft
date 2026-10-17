@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:03:41 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:03:43 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:42:27 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -27,10 +27,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		current = current->next;
 	}
 }
-
-// #include <stdio.h>
-// int main(){
-//     unsigned int test;
-//     test=4294967295 * 4;
-//     printf("%u\n",test);
-// }

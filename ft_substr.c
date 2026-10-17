@@ -6,12 +6,12 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:06:46 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:06:48 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:45:18 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // it take len amount starting from the start index
-#include "includes/libft.h"
+#include "libft.h"
 
 static char	*fail_start(void)
 {
@@ -49,12 +49,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	array[i] = '\0';
 	return (array);
 }
-
-// int main(void)
-// {
-//     char *result = ft_substr("Hello World", 10, 5);
-
-//     printf("%s\n", result);
-//     free(result);
-//     return (0);
-// }

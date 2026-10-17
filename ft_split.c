@@ -6,11 +6,16 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:05:17 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 16:28:59 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 18:20:17 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
+
+// ",,,,hello word,,,sdsds,,,";
+//      s
+// count 0;
+// len =27;
 
 static int	count_words(char const *s, char c)
 {

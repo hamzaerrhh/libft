@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:02:21 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:02:23 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:41:39 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 // overflow
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -18,8 +18,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*arr;
 	size_t	max;
 
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
 	max = size * nmemb;
-	if (nmemb && (max / nmemb) != size)
+	if ((max / nmemb) != size)
 	{
 		return (NULL);
 	}

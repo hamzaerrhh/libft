@@ -6,11 +6,21 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:02:34 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:02:37 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:41:46 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
+
+static int	ft_islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+static int	ft_isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
 
 int	ft_isalpha(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:06:07 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:06:09 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:44:42 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -28,15 +28,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (copy);
 }
-
-// char shift_char(unsigned int i, char c)
-// {
-//     return (c + 4);
-// }
-
-// int main(){
-//     char str[]="hello abc";
-//   printf("%s\n",ft_strmapi(str,shift_char));
-// return (0);
-
-// }

@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:40:05 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 16:48:13 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 11:16:30 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <unistd.h>
 // testing
-# include <stdio.h>
 
 // type def
 
@@ -25,11 +24,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-// HELPER
-int					ft_isupper(int c);
-int					ft_isspace(int c);
-int					ft_islower(int c);
 
 //// PART 1
 int					ft_isalpha(int c);

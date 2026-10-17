@@ -6,11 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:06:39 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 14:06:41 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 16:45:10 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 static int	ft_isc_in_str(const char *str, char c)
 {
@@ -36,11 +36,9 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	start = 0;
+	end = ft_strlen(s1);
 	while (s1[start] && ft_isc_in_str(s2, s1[start]))
 		start++;
-	end = 0;
-	while (s1[end])
-		end++;
 	while (end > start && ft_isc_in_str(s2, s1[end - 1]))
 		end--;
 	result = malloc(sizeof(char) * (end - start + 1));
@@ -52,34 +50,3 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	char	*result;
-
-// 	result = ft_strtrim("xxxhelloxxx", "x");
-// 	printf("Test 1: [%s]\n", result);
-// 	free(result);
-
-// 	result = ft_strtrim("  hello world  ", " ");
-// 	printf("Test 2: [%s]\n", result);
-// 	free(result);
-
-// 	result = ft_strtrim("///hello///", "/");
-// 	printf("Test 3: [%s]\n", result);
-// 	free(result);
-
-// 	result = ft_strtrim("abc", "abc");
-// 	printf("Test 4: [%s]\n", result);
-// 	free(result);
-
-// 	result = ft_strtrim("hello", "xyz");
-// 	printf("Test 5: [%s]\n", result);
-// 	free(result);
-
-// 	result = ft_strtrim("", "abc");
-// 	printf("Test 6: [%s]\n", result);
-// 	free(result);
-
-// 	return (0);
-// }

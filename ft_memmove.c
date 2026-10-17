@@ -6,13 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:04:31 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/15 16:25:43 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/17 17:49:40 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-
-#include "includes/libft.h"
+#include "libft.h"
 
 static void	ft_copy_backward(unsigned char *d, const unsigned char *s,
 		size_t len)
@@ -39,7 +37,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len > 0)
 		{
-			*d++ = *s++;
+			*d = *s;
+			d++;
+			s++;
 			len--;
 		}
 	}
