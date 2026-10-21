@@ -1,5 +1,2 @@
-subject/
-*.sh
-programe
-todo
+.gitignore
 main.c

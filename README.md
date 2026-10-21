@@ -4,30 +4,30 @@
 
 ## Description
 
-**Libft** is the first project of the 42 curriculum. The goal is to write a personal C library, `libft.a`, containing general-purpose functions that will be reused in all later projects.
+Libft is the first project of the 42 curriculum. The goal is to write a personal C library, `libft.a`, containing general-purpose functions that will be reused in all later projects.
 
-The project helps to understand how the standard C library works by reimplementing it, and it covers pointers, string and memory manipulation, dynamic allocation (`malloc` / `free`), linked lists, and building a static library with a `Makefile` and `ar`.
+The project helps to understand how the standard C library works by reimplementing it, and it covers pointers, string and memory manipulation, dynamic allocation (`malloc` / `free`), linked lists, and building a static library with a Makefile and `ar`.
 
-### Library overview
+## Library overview
 
 All functions are prefixed with `ft_`, are compiled with `-Wall -Wextra -Werror`, follow the 42 Norm, use no global variables, and rely only on the external functions allowed by the subject (`malloc`, `free`, `write`).
 
-#### Part 1: libc functions
+### Part 1: libc functions
 
 Reimplementations with the same prototypes and behaviour as the originals described in their man pages.
 
 | Category | Functions |
 |---|---|
-| Character classification | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint` (return `1` if the character matches, `0` otherwise) |
+| Character classification | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint` (return 1 if the character matches, 0 otherwise) |
 | Character conversion | `ft_toupper`, `ft_tolower` |
 | String functions | `ft_strlen`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strlcpy`, `ft_strlcat` |
 | Memory functions | `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp` |
 | Conversion | `ft_atoi` |
 | Allocation (`malloc`) | `ft_calloc`, `ft_strdup` |
 
-`ft_calloc` follows the subject's rule: if `nmemb` or `size` is `0`, it returns a unique pointer that can be passed to `free()`.
+`ft_calloc` follows the subject's rule: if `nmemb` or `size` is 0, it returns a unique pointer that can be passed to `free()`.
 
-#### Part 2: additional functions
+### Part 2: additional functions
 
 | Function | Description |
 |---|---|
@@ -43,7 +43,7 @@ Reimplementations with the same prototypes and behaviour as the originals descri
 | `ft_putendl_fd` | Writes a string followed by a newline to a file descriptor. |
 | `ft_putnbr_fd` | Writes an integer to a file descriptor. |
 
-#### Part 3: linked lists
+### Part 3: linked lists
 
 The library provides the following list node structure, declared in `libft.h`:
 
@@ -67,10 +67,6 @@ typedef struct s_list
 | `ft_lstiter` | Applies a function to the content of every node. |
 | `ft_lstmap` | Builds a new list by applying a function to each node's content, cleaning up with `del` if an allocation fails. |
 
-#### Extra helpers
-
-`ft_isupper` and `ft_islower` are additional character-classification helpers that are not required by the subject.
-
 ## Instructions
 
 ### Requirements
@@ -82,27 +78,39 @@ typedef struct s_list
 
 ### Compilation
 
-```bash
+```sh
 make          # build libft.a at the root of the repository
 make clean    # remove object files
 make fclean   # remove object files and libft.a
 make re       # fclean, then rebuild everything
 ```
 
-The `Makefile` compiles every source file with `cc -Wall -Wextra -Werror`, creates the archive with `ar`, and does not relink if nothing has changed.
+The Makefile compiles every source file with `cc -Wall -Wextra -Werror`, creates the archive with `ar`, and does not relink if nothing has changed.
 
 ### Usage in your own program
 
-Include the header:
+1. Build the library from the root of the repository:
+
+```sh
+make
+```
+
+2. Include the header in your source file. `libft.h` is located at the root of the repository, next to `libft.a`:
 
 ```c
 #include "libft.h"
 ```
 
-Compile your program and link it with the library (adjust the include path to where `libft.h` is located, here `includes/`):
+3. Compile your program and link it with the library:
 
-```bash
-cc -Wall -Wextra -Werror -Iincludes main.c -L. -lft -o my_program
+```sh
+cc -Wall -Wextra -Werror main.c libft.a -o my_program
+```
+
+If your program lives in another directory, point `-I` and `-L` to the repository root instead of `.`:
+
+```sh
+cc -Wall -Wextra -Werror main.c -I/path/to/libft -L/path/to/libft -lft -o my_program
 ```
 
 ### Example
@@ -138,17 +146,19 @@ On glibc systems, `strlcpy`, `strlcat` and `bzero` may require `<bsd/string.h>` 
 
 ### References
 
-- [Linux man pages](https://man7.org/linux/man-pages/): behaviour of every reimplemented function (`man 3 strlcpy`, `man 3 memmove`, etc.)
+- Linux man pages: behaviour of every reimplemented function (`man 3 strlcpy`, `man 3 memmove`, etc.)
 - [cppreference: C standard library](https://en.cppreference.com/w/c)
-- [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
-- [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language) by Kernighan and Ritchie
+- [GNU Make Manual](https://www.gnu.org/software/make/manual/)
+- *The C Programming Language* by Kernighan and Ritchie
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/)
 - [Norminette](https://github.com/42School/norminette): the 42 Norm checker
 
 ### Use of AI
 
-In line with the project's AI instructions, AI (Claude) was not used to write the library functions. It was used only for:
+In line with the project's AI instructions, AI was not used to write the library functions. It was used only for:
 
 - **README.md:** drafting and structuring this file.
+- **Searching for resources:** quickly finding relevant documentation, references and tutorials.
+- **Understanding function behaviour:** a fast way to look up how some functions behave and why they return what they do (return values, edge cases).
 
-All the library code, the `Makefile`, and the tests were written, understood, and tested by me and discussed with peers.
+All the library code, the Makefile,header file were written, understood, and tested by me and discussed with peers.

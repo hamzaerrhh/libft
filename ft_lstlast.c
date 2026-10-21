@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:03:47 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 16:42:34 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/20 21:03:28 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*tmp;
+	if (!lst){
+		return NULL;
+	}
 
 	tmp = lst;
 	while (lst->next)
