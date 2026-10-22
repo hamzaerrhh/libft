@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:05:23 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 16:43:53 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:32:33 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
+	if (s[i])
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (char)c)

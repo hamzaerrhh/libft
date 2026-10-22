@@ -6,22 +6,22 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:05:42 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 17:56:09 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:28:17 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *set)
 {
 	size_t	size;
 	size_t	i;
 	size_t	j;
 	char	*arr;
 
-	if (s1 && s2)
+	if (s1 && set)
 	{
-		size = ft_strlen(s1) + ft_strlen(s2);
+		size = ft_strlen(s1) + ft_strlen(set);
 		arr = (char *)malloc(sizeof(char) * (size + 1));
 		if (!arr)
 			return (NULL);
@@ -30,8 +30,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		while (s1[++j])
 			arr[i++] = s1[j];
 		j = -1;
-		while (s2[++j])
-			arr[i++] = s2[j];
+		while (set[++j])
+			arr[i++] = set[j];
 		arr[i] = '\0';
 		return (arr);
 	}

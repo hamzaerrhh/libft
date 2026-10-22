@@ -6,16 +6,11 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:05:17 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 18:20:17 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:14:26 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// ",,,,hello word,,,sdsds,,,";
-//      s
-// count 0;
-// len =27;
 
 static int	count_words(char const *s, char c)
 {
@@ -98,22 +93,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	char	**words;
-// 	int		i;
-
-// 	words = ft_split("hello,,,world,,42", ',');
-// 	if (!words)
-// 		return (1);
-// 	i = 0;
-// 	while (words[i])
-// 	{
-// 		printf("%s\n", words[i]);
-// 		free(words[i]);
-// 		i++;
-// 	}
-// 	free(words);
-// 	return (0);
-// }

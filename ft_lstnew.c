@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:04:00 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/20 21:04:43 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:32:16 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	if (!content)
-	{
-		return (NULL);
-	}
 	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);

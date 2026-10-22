@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:40:05 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 11:16:30 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:06:35 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t num);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
-char				*ft_strcat(char *dest, const char *src);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_strchr(const char *s, int c);

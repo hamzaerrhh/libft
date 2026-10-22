@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:03:52 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/21 10:49:26 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:07:02 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*new;
 
-	if (!f || !del )
+	if (!f || !del)
 		return (NULL);
 	first = NULL;
 	while (lst)
