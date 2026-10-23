@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:06:46 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/17 16:45:18 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/22 17:09:04 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	size;
 	char	*array;
-	char	*dst;
 
-	i = 0;
-	dst = (char *)s;
-	if (!dst)
+	if (!s)
 		return (NULL);
-	size = ft_strlen(dst);
-	if (size < start)
+	size = ft_strlen(s);
+	if (start >= size)
 		return (fail_start());
+	if (len > size - start)
+		len = size - start;
 	array = (char *)malloc(sizeof(char) * (len + 1));
 	if (!array)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		array[i] = s[start + i];

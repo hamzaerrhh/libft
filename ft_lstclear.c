@@ -6,7 +6,7 @@
 /*   By: herrabba <herrabba@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 14:03:29 by herrabba          #+#    #+#             */
-/*   Updated: 2026/10/20 21:02:45 by herrabba         ###   ########.fr       */
+/*   Updated: 2026/10/22 17:16:03 by herrabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	current = *lst;
 	while (current)

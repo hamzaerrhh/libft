@@ -107,11 +107,6 @@ make
 cc -Wall -Wextra -Werror main.c libft.a -o my_program
 ```
 
-If your program lives in another directory, point `-I` and `-L` to the repository root instead of `.`:
-
-```sh
-cc -Wall -Wextra -Werror main.c -I/path/to/libft -L/path/to/libft -lft -o my_program
-```
 
 ### Example
 
